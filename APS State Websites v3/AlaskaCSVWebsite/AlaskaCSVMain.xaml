@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1017,3057</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1101,2936</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="68">
@@ -76,10 +76,9 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AKCSV" sap:VirtualizedContainerService.HintSize="615,2892" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This website is a direct download of a CSV and there is no UI interaction" DisplayName="AKCSV" sap:VirtualizedContainerService.HintSize="815,2871" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="extractedDT" />
       <Variable x:TypeArguments="sd:DataTable" Name="finalDT" />
@@ -101,10 +100,11 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:FileExistsX DisplayName="File Exists" Exists="[downloadedFile]" sap:VirtualizedContainerService.HintSize="573,132" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[Environment.CurrentDirectory+&quot;\AlaskaCSVWebsite\fileToUse.csv&quot;]" />
-    <If Condition="[downloadedFile=True]" sap:VirtualizedContainerService.HintSize="573,401" sap2010:WorkflowViewState.IdRef="If_2">
+    <ui:FileExistsX DisplayName="File Exists" Exists="[downloadedFile]" sap:VirtualizedContainerService.HintSize="773,132" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[Environment.CurrentDirectory+&quot;\AlaskaCSVWebsite\fileToUse.csv&quot;]" />
+    <If Condition="[downloadedFile=True]" DisplayName="If alaska file exists, get file info ELSE download the file" sap:VirtualizedContainerService.HintSize="773,382" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="486,224" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
@@ -116,16 +116,33 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://www.commerce.alaska.gov/cbp/DBDownloads/ProfessionalLicenseDownload.CSV" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" ResourcePath="fileToUse.csv" TimeoutMS="6000">
+            <ui:HttpClient.Attachments>
+              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+            </ui:HttpClient.Attachments>
+            <ui:HttpClient.Cookies>
+              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+            </ui:HttpClient.Cookies>
+            <ui:HttpClient.Headers>
+              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+            </ui:HttpClient.Headers>
+            <ui:HttpClient.Parameters>
+              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+            </ui:HttpClient.Parameters>
+            <ui:HttpClient.UrlSegments>
+              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+            </ui:HttpClient.UrlSegments>
+          </ui:HttpClient>
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[not fileToUseINFO.LastAccessedDate.Contains(Today.ToShortDateString)]" sap:VirtualizedContainerService.HintSize="573,291" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[not fileToUseINFO.LastAccessedDate.Contains(Today.ToShortDateString)]" DisplayName="If the file isnt from today, redownload the file" sap:VirtualizedContainerService.HintSize="773,301" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
@@ -153,8 +170,8 @@
         </Sequence>
       </If.Then>
     </If>
-    <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[extractedDT]" Delimitator="Comma" DisplayName="Read CSV" FilePath="[Environment.CurrentDirectory+&quot;\AlaskaCSVWebsite\fileToUse.csv&quot;]" sap:VirtualizedContainerService.HintSize="573,152" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
-    <Assign sap:VirtualizedContainerService.HintSize="573,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[extractedDT]" Delimitator="Comma" DisplayName="Read CSV" FilePath="[Environment.CurrentDirectory+&quot;\AlaskaCSVWebsite\fileToUse.csv&quot;]" sap:VirtualizedContainerService.HintSize="773,152" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+    <Assign sap:VirtualizedContainerService.HintSize="773,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[finalDt]</OutArgument>
       </Assign.To>
@@ -162,8 +179,8 @@
         <InArgument x:TypeArguments="sd:DataTable">[extractedDT.Select("[LicenseNum] = '"+in_licNum+"'").CopyToDataTable]</InArgument>
       </Assign.Value>
     </Assign>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="573,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[finalDT.RowCount.ToString]" />
-    <If Condition="[finalDT.RowCount&lt;1]" sap:VirtualizedContainerService.HintSize="573,291" sap2010:WorkflowViewState.IdRef="If_1">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="773,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[finalDT.RowCount.ToString]" />
+    <If Condition="[finalDT.RowCount&lt;1]" sap:VirtualizedContainerService.HintSize="773,301" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
@@ -184,7 +201,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" ColumnSelectionType="ByName" DataTable="[finalDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="573,1028" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" ColumnSelectionType="ByName" DataTable="[finalDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="773,975" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -192,11 +209,7 @@
           </ActivityAction.Argument>
           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="539,855" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
-              <Variable x:TypeArguments="scg:ICollection(x:String)" Name="nameColl">
-                <Variable.Default>
-                  <mva:VisualBasicValue x:TypeArguments="scg:ICollection(x:String)" ExpressionText="new Collection(of String)" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="scg:ICollection(x:String)" Default="[new Collection(of String)]" Name="nameColl" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">

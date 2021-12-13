@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1818,2411</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1818,2160</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PageChecker_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -78,7 +78,7 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PageChecker" sap:VirtualizedContainerService.HintSize="1828,2246" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PageChecker" sap:VirtualizedContainerService.HintSize="1828,2095" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="PageTitle" />
       <Variable x:TypeArguments="x:String" Name="LicenseStatus" />
@@ -91,88 +91,20 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1786,51" sap2010:WorkflowViewState.IdRef="CommentOut_8">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="554,606" sap2010:WorkflowViewState.IdRef="Sequence_22">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="512,514" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="1a58640ed571ba9e251494e740a8a24b" Selector="&lt;html app='chrome.exe' title='AC00591 - Cheng, Chia Chia Zou, LAc - OR License Verification - 05/06/2021 09:39:41 AM' /&gt;" UiBrowser="[in_BrowserToUse]">
-            <ui:BrowserScope.Body>
-              <ActivityAction x:TypeArguments="x:Object">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478,368" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,276" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                    <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'LABEL'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
-                          <ui:UiElementExists.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f6c354fd-1477-45d8-bbe3-2b267f771a03" InformativeScreenshot="684de1947bd47a67654e05b74010a221" Selector="&lt;html app='chrome.exe' title='Applicant/Licensee Services' /&gt;&lt;webctrl aaname='     More info...     ' tag='A' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:UiElementExists.Target>
-                        </ui:UiElementExists>
-                      </Sequence>
-                    </ui:CommentOut.Body>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:CommentOut>
-                </Sequence>
-              </ActivityAction>
-            </ui:BrowserScope.Body>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:BrowserScope>
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="1786,2063" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="1a58640ed571ba9e251494e740a8a24b" Selector="&lt;html app='chrome.exe' /&gt;" UiBrowser="[in_BrowserToUse]">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="1786,2003" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="1a58640ed571ba9e251494e740a8a24b" Selector="&lt;html app='chrome.exe' /&gt;" UiBrowser="[in_BrowserToUse]">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1752,1917" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1752,1857" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Pick sap:VirtualizedContainerService.HintSize="1710,1734" sap2010:WorkflowViewState.IdRef="Pick_1">
-              <PickBranch DisplayName="check for license on additional license" sap:VirtualizedContainerService.HintSize="728,1688" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+            <Pick sap:VirtualizedContainerService.HintSize="1710,1765" sap2010:WorkflowViewState.IdRef="Pick_1">
+              <PickBranch DisplayName="check for license on additional license" sap:VirtualizedContainerService.HintSize="728,1719" sap2010:WorkflowViewState.IdRef="PickBranch_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -193,20 +125,20 @@
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
                 </PickBranch.Trigger>
-                <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="678,1384" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="678,1413" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attch browser" sap:VirtualizedContainerService.HintSize="636,1292" sap2010:WorkflowViewState.IdRef="BrowserScope_7" InformativeScreenshot="00ad62568e1ef3ee5ed4055d4d2c1b86" Selector="&lt;html app='chrome.exe' title='* OR License Verification -*' /&gt;">
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attch browser" sap:VirtualizedContainerService.HintSize="636,1321" sap2010:WorkflowViewState.IdRef="BrowserScope_7" InformativeScreenshot="00ad62568e1ef3ee5ed4055d4d2c1b86" Selector="&lt;html app='chrome.exe' title='* OR License Verification -*' /&gt;">
                     <ui:BrowserScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,1146" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,1175" sap2010:WorkflowViewState.IdRef="Sequence_20">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -221,27 +153,27 @@
                               </ui:Target>
                             </ui:ExtractData.Target>
                           </ui:ExtractData>
-                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[index]" DataTable="[AdditionalLicenseDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,632" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[index]" DataTable="[AdditionalLicenseDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,648" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                             <ui:ForEachRow.Body>
                               <ActivityAction x:TypeArguments="sd:DataRow">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,513" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,528" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <If Condition="[CurrentRow(&quot;License Number&quot;).ToString=in_LicenseNum]" DisplayName="If APS license is on page" sap:VirtualizedContainerService.HintSize="484,421" sap2010:WorkflowViewState.IdRef="If_3">
+                                  <If Condition="[CurrentRow(&quot;License Number&quot;).ToString=in_LicenseNum]" DisplayName="If APS license is on page" sap:VirtualizedContainerService.HintSize="484,436" sap2010:WorkflowViewState.IdRef="If_3">
                                     <If.Then>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="376,247" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;person found via additional licenses&quot;]" />
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;person found via additional licenses&quot;]" />
                                         <ui:Break sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Break_1" />
                                       </Sequence>
                                     </If.Then>
@@ -256,7 +188,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:ForEachRow>
-                          <If Condition="[index&gt;AdditionalLicenseDT.rows.Count]" DisplayName="Throw NOMATCH if the additional licenses doesnt list APS one" sap:VirtualizedContainerService.HintSize="560,236" sap2010:WorkflowViewState.IdRef="If_4">
+                          <If Condition="[index&gt;AdditionalLicenseDT.rows.Count]" DisplayName="Throw NOMATCH if the additional licenses doesnt list APS one" sap:VirtualizedContainerService.HintSize="560,249" sap2010:WorkflowViewState.IdRef="If_4">
                             <If.Then>
                               <Throw DisplayName="Throw NOMATCH" Exception="[new BusinessRuleException(&quot;NOMATCH&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_4" />
                             </If.Then>
@@ -267,7 +199,7 @@
                   </ui:BrowserScope>
                 </Sequence>
               </PickBranch>
-              <PickBranch DisplayName="Check for No results found" sap:VirtualizedContainerService.HintSize="384,1688" sap2010:WorkflowViewState.IdRef="PickBranch_3">
+              <PickBranch DisplayName="Check for No results found" sap:VirtualizedContainerService.HintSize="384,1719" sap2010:WorkflowViewState.IdRef="PickBranch_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -290,7 +222,7 @@
                 </PickBranch.Trigger>
                 <Throw DisplayName="Throw NOMATCH" Exception="[new BusinessRuleException(&quot;NOMATCH&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_3" />
               </PickBranch>
-              <PickBranch DisplayName="Check page title for in_LicenseNumber" sap:VirtualizedContainerService.HintSize="384,1688" sap2010:WorkflowViewState.IdRef="PickBranch_4">
+              <PickBranch DisplayName="Check page title for in_LicenseNumber" sap:VirtualizedContainerService.HintSize="384,1719" sap2010:WorkflowViewState.IdRef="PickBranch_4">
                 <PickBranch.Trigger>
                   <ui:UiElementExists Exists="{x:Null}" DisplayName="Check for Page title" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
                     <ui:UiElementExists.Target>
@@ -305,116 +237,9 @@
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
                 </PickBranch.Trigger>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;found person using page title&quot;]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;found person using page title&quot;]" />
               </PickBranch>
             </Pick>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1710,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="775,1134" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="733,1042" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="1a58640ed571ba9e251494e740a8a24b" Selector="&lt;html app='chrome.exe' /&gt;" UiBrowser="[in_BrowserToUse]">
-                    <ui:BrowserScope.Body>
-                      <ActivityAction x:TypeArguments="x:Object">
-                        <ActivityAction.Argument>
-                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                        </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="699,896" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <If Condition="[NewTabExists=False]" DisplayName="If New tab exists" sap:VirtualizedContainerService.HintSize="657,804" sap2010:WorkflowViewState.IdRef="If_1">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="621,628" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                                <Sequence.Variables>
-                                  <Variable x:TypeArguments="x:Boolean" Name="LicNumExists" />
-                                  <Variable x:TypeArguments="x:String" Name="SearchPageName">
-                                    <Variable.Default>
-                                      <Literal x:TypeArguments="x:String" Value="" />
-                                    </Variable.Default>
-                                  </Variable>
-                                </Sequence.Variables>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:GetAttribute Attribute="innerText" ContinueOnError="True" DisplayName="Get names on list" sap:VirtualizedContainerService.HintSize="579,134" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
-                                  <ui:GetAttribute.Result>
-                                    <OutArgument x:TypeArguments="x:String">[SearchPageName]</OutArgument>
-                                  </ui:GetAttribute.Result>
-                                  <ui:GetAttribute.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f4343921-8feb-47e5-98d3-166c32b6dcb1" InformativeScreenshot="ec08c30163ab77527cbc3d4195c1968e" Selector="&lt;webctrl tag='DIV' innertext='     *     MD License: *     Status: *                   Addresses                                 More info...                                                                                                        ' /&gt;" TimeoutMS="1000">
-                                      <ui:Target.WaitForReady>
-                                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                                      </ui:Target.WaitForReady>
-                                    </ui:Target>
-                                  </ui:GetAttribute.Target>
-                                </ui:GetAttribute>
-                                <ui:IsMatch BuilderPattern="MD180404" DisplayName="Is Match" sap:VirtualizedContainerService.HintSize="579,59" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[SearchPageName]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;MD180404&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="[in_LicenseNum]" RegexOption="IgnoreCase" Result="[LicNumExists]" />
-                                <If Condition="[LicNumExists]" sap:VirtualizedContainerService.HintSize="579,263" sap2010:WorkflowViewState.IdRef="If_2">
-                                  <If.Then>
-                                    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click More info" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                                      <ui:Click.CursorPosition>
-                                        <ui:CursorPosition Position="Center">
-                                          <ui:CursorPosition.OffsetX>
-                                            <InArgument x:TypeArguments="x:Int32" />
-                                          </ui:CursorPosition.OffsetX>
-                                          <ui:CursorPosition.OffsetY>
-                                            <InArgument x:TypeArguments="x:Int32" />
-                                          </ui:CursorPosition.OffsetY>
-                                        </ui:CursorPosition>
-                                      </ui:Click.CursorPosition>
-                                      <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="92eeca68-66d1-4210-bfbc-1335a9221c15" InformativeScreenshot="c77903dfadd2b7966c939d6d756aff45" Selector="&lt;html app='chrome.exe' title='Applicant/Licensee Services' /&gt;&lt;webctrl aaname='     More info...     ' tag='A' /&gt;">
-                                          <ui:Target.TimeoutMS>
-                                            <InArgument x:TypeArguments="x:Int32" />
-                                          </ui:Target.TimeoutMS>
-                                          <ui:Target.WaitForReady>
-                                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                                          </ui:Target.WaitForReady>
-                                        </ui:Target>
-                                      </ui:Click.Target>
-                                    </ui:Click>
-                                  </If.Then>
-                                  <If.Else>
-                                    <Throw DisplayName="Throw business exception" Exception="[new BusinessRuleException(&quot;NOMATCH&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
-                                  </If.Else>
-                                </If>
-                              </Sequence>
-                            </If.Then>
-                          </If>
-                        </Sequence>
-                      </ActivityAction>
-                    </ui:BrowserScope.Body>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:BrowserScope>
-                </Sequence>
-              </ui:CommentOut.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
           </Sequence>
         </ActivityAction>
       </ui:BrowserScope.Body>

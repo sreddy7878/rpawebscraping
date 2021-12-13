@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1101,960</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1101,860</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -366,9 +366,9 @@
                     <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="SystemException IsNot Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_3" />
                   </Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="747,3768" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="747,3942" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="701,3350" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="701,3524" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -376,7 +376,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="632,3123" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="632,3297" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -391,7 +391,7 @@
                                   <InArgument x:TypeArguments="s:Exception">[Nothing]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="590,2779" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="590,2953" sap2010:WorkflowViewState.IdRef="If_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -400,12 +400,14 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="554,2571" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="554,2735" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="ui:WorkbookApplication" Name="wb" />
                                       <Variable x:TypeArguments="sd:DataTable" Name="initialDT" />
                                       <Variable x:TypeArguments="sd:DataTable" Name="scrapeDT" />
                                       <Variable x:TypeArguments="x:String" Name="EntryPoint" />
+                                      <Variable x:TypeArguments="x:Boolean" Name="inputExists" />
+                                      <Variable x:TypeArguments="x:Boolean" Name="outPutExists" />
                                     </Sequence.Variables>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -413,180 +415,70 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,482" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                                      <ui:CommentOut.Body>
-                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,404" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                    <ui:PathExists DisplayName="Path Exists" Exists="[inputExists]" sap:VirtualizedContainerService.HintSize="512,89" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="Data\Input" PathType="Folder" />
+                                    <If Condition="[inputExists=False]" sap:VirtualizedContainerService.HintSize="512,358" sap2010:WorkflowViewState.IdRef="If_11">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,171" sap2010:WorkflowViewState.IdRef="Sequence_40">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;Data\Input\file_from_&quot;+Date.Today.ToString(&quot;MMddyyy&quot;)+&quot;.xlsx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="False" Path="[&quot;C:\Users\&quot;+environment.username+&quot;\Desktop\APS Lookup\file_from_&quot;+Date.Today.ToString(&quot;MMddyyy&quot;)+&quot;.xlsx&quot;]" />
-                                          <ui:WriteCell Cell="B2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Settings" Text="[&quot;C:\Users\&quot;+environment.username+&quot;\Desktop\APS Lookup\file_from_&quot;+Date.Today.ToString(&quot;MMddyyy&quot;)+&quot;.xlsx&quot;]" WorkbookPath="Data\Config.xlsx" />
+                                          <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="Data\Input" />
                                         </Sequence>
-                                      </ui:CommentOut.Body>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ui:CommentOut>
-                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,236" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-                                      <ui:CommentOut.Body>
-                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_41">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence DisplayName="Entry Point" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_38">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                            <ui:ReadTextFile Content="[EntryPoint]" DisplayName="Read APS_Entry" FileName="[&quot;C:\Users\&quot;+environment.username+&quot;\Desktop\APS Lookup\APS_Entry.txt&quot;]" sap:VirtualizedContainerService.HintSize="497,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-                                            <Switch x:TypeArguments="x:String" DisplayName="Entry Point" Expression="[EntryPoint]" sap:VirtualizedContainerService.HintSize="497,585" sap2010:WorkflowViewState.IdRef="Switch`1_1">
-                                              <Switch.Default>
-                                                <Sequence DisplayName="New file" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_36">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[initialDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_7" SheetName="Sheet1" WorkbookPath="[&quot;C:\Users\&quot;+environment.username+&quot;\Desktop\APS Lookup\file_from_&quot;+Date.Today.ToString(&quot;MMddyyy&quot;)+&quot;.xlsx&quot;]" />
-                                                  <ui:FilterDataTable DataTable="[initialDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[scrapeDT]" SelectColumnsMode="Keep">
-                                                    <ui:FilterDataTable.Filters>
-                                                      <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                                                        <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
-                                                      </scg:List>
-                                                    </ui:FilterDataTable.Filters>
-                                                    <ui:FilterDataTable.SelectColumns>
-                                                      <scg:List x:TypeArguments="InArgument" Capacity="8">
-                                                        <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
-                                                        <InArgument x:TypeArguments="x:String">["APS_FIRSTNAME"]</InArgument>
-                                                        <InArgument x:TypeArguments="x:String">["APS_LASTNAME"]</InArgument>
-                                                        <InArgument x:TypeArguments="x:String">["LICENSE_NUMBER"]</InArgument>
-                                                        <InArgument x:TypeArguments="x:String">["LICENSE_STATE"]</InArgument>
-                                                      </scg:List>
-                                                    </ui:FilterDataTable.SelectColumns>
-                                                  </ui:FilterDataTable>
-                                                  <ui:Delete ContinueOnError="True" DisplayName="Delete older file" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="Delete_3" Path="Data\Input\file_to_scrape.xlsx" />
-                                                  <ui:WriteRange AddHeaders="True" DataTable="[scrapeDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Data\Input\file_to_scrape.xlsx" />
-                                                  <ui:WriteCell Cell="B3" DisplayName="Set OutputFile Date for today" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="Settings" Text="[&quot;Data\Output\output_file_from_&quot;+Date.Today.ToString(&quot;MMddyyy&quot;)+&quot;.xlsx&quot;]" WorkbookPath="Data\Config.xlsx" />
-                                                </Sequence>
-                                              </Switch.Default>
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence x:Key="Retry" DisplayName="Retry File" sap:VirtualizedContainerService.HintSize="376,379" sap2010:WorkflowViewState.IdRef="Sequence_32">
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                                <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[initialDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Sheet1" WorkbookPath="[&quot;C:\Users\&quot;+environment.username+&quot;\Desktop\APS Lookup\file_from_&quot;+Date.Today.ToString(&quot;MMddyyy&quot;)+&quot;.xlsx&quot;]" />
-                                                <ui:FilterDataTable DataTable="[initialDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[scrapeDT]" SelectColumnsMode="Keep">
-                                                  <ui:FilterDataTable.Filters>
-                                                    <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                                                      <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
-                                                    </scg:List>
-                                                  </ui:FilterDataTable.Filters>
-                                                  <ui:FilterDataTable.SelectColumns>
-                                                    <scg:List x:TypeArguments="InArgument" Capacity="16">
-                                                      <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["APS_FIRSTNAME"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["APS_LASTNAME"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["LICENSE_NUMBER"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["LICENSE_STATE"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["sbwLicNum"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["SbwLicState"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["StateBoardFirst"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["StateBoardMiddle"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["StateBoardLast"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["SbwLicType"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["SbwLicType2"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["SbwLicExpDate"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["SbwLicStatus"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["SbwLicQualifier"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["Notes"]</InArgument>
-                                                    </scg:List>
-                                                  </ui:FilterDataTable.SelectColumns>
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                </ui:FilterDataTable>
-                                              </Sequence>
-                                              <Sequence x:Key="New" DisplayName="New file" sap:VirtualizedContainerService.HintSize="376,66" sap2010:WorkflowViewState.IdRef="Sequence_35">
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                                <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[initialDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_6" SheetName="Sheet1" WorkbookPath="[&quot;C:\Users\&quot;+environment.username+&quot;\Desktop\APS Lookup\file_from_&quot;+Date.Today.ToString(&quot;MMddyyy&quot;)+&quot;.xlsx&quot;]" />
-                                                <ui:FilterDataTable DataTable="[initialDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[scrapeDT]" SelectColumnsMode="Keep">
-                                                  <ui:FilterDataTable.Filters>
-                                                    <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                                                      <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
-                                                    </scg:List>
-                                                  </ui:FilterDataTable.Filters>
-                                                  <ui:FilterDataTable.SelectColumns>
-                                                    <scg:List x:TypeArguments="InArgument" Capacity="8">
-                                                      <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["APS_FIRSTNAME"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["APS_LASTNAME"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["LICENSE_NUMBER"]</InArgument>
-                                                      <InArgument x:TypeArguments="x:String">["LICENSE_STATE"]</InArgument>
-                                                    </scg:List>
-                                                  </ui:FilterDataTable.SelectColumns>
-                                                </ui:FilterDataTable>
-                                                <ui:Delete ContinueOnError="True" DisplayName="Delete older file" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="Delete_2" Path="Data\Input\file_to_scrape.xlsx" />
-                                                <ui:WriteRange AddHeaders="True" DataTable="[scrapeDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Data\Input\file_to_scrape.xlsx" />
-                                                <ui:WriteCell Cell="B3" DisplayName="Set OutputFile Date for today" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Settings" Text="[&quot;Data\Output\output_file_from_&quot;+Date.Today.ToString(&quot;MMddyyy&quot;)+&quot;.xlsx&quot;]" WorkbookPath="Data\Config.xlsx" />
-                                              </Sequence>
-                                            </Switch>
-                                          </Sequence>
                                         </Sequence>
-                                      </ui:CommentOut.Body>
-                                    </ui:CommentOut>
-                                    <Sequence DisplayName="New file" sap:VirtualizedContainerService.HintSize="512,808" sap2010:WorkflowViewState.IdRef="Sequence_34">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[initialDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_5" SheetName="Sheet1" WorkbookPath="[&quot;C:\Users\&quot;+environment.username+&quot;\Desktop\APS Lookup\file_from_&quot;+Date.Today.ToString(&quot;MMddyyy&quot;)+&quot;.xlsx&quot;]" />
-                                      <ui:FilterDataTable DataTable="[initialDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[scrapeDT]" SelectColumnsMode="Keep">
-                                        <ui:FilterDataTable.Filters>
-                                          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                                            <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
-                                          </scg:List>
-                                        </ui:FilterDataTable.Filters>
-                                        <ui:FilterDataTable.SelectColumns>
-                                          <scg:List x:TypeArguments="InArgument" Capacity="8">
-                                            <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
-                                            <InArgument x:TypeArguments="x:String">["APS_FIRSTNAME"]</InArgument>
-                                            <InArgument x:TypeArguments="x:String">["APS_LASTNAME"]</InArgument>
-                                            <InArgument x:TypeArguments="x:String">["LICENSE_NUMBER"]</InArgument>
-                                            <InArgument x:TypeArguments="x:String">["LICENSE_STATE"]</InArgument>
-                                          </scg:List>
-                                        </ui:FilterDataTable.SelectColumns>
-                                      </ui:FilterDataTable>
-                                      <ui:Delete ContinueOnError="True" DisplayName="Delete older file" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="Delete_1" Path="Data\Input\file_to_scrape.xlsx" />
-                                      <ui:WriteRange AddHeaders="True" DataTable="[scrapeDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Data\Input\file_to_scrape.xlsx" />
-                                      <ui:WriteCell Cell="B3" DisplayName="Set OutputFile Date for today" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Settings" Text="[&quot;Data\Output\output_file_from_&quot;+Date.Today.ToString(&quot;MMddyyy&quot;)+&quot;.xlsx&quot;]" WorkbookPath="Data\Config.xlsx" />
-                                    </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <ui:PathExists DisplayName="Path Exists" Exists="[outPutExists]" sap:VirtualizedContainerService.HintSize="512,89" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="Data\Output" PathType="Folder" />
+                                    <If Condition="[OutputExists=False]" sap:VirtualizedContainerService.HintSize="512,358" sap2010:WorkflowViewState.IdRef="If_13">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,171" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="Data\Output" />
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[initialDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="512,87" sap2010:WorkflowViewState.IdRef="ReadRange_5" SheetName="Sheet1" WorkbookPath="[&quot;C:\Users\&quot;+environment.username+&quot;\Desktop\APS Lookup\file_from_&quot;+Date.Today.ToString(&quot;MMddyyy&quot;)+&quot;.xlsx&quot;]" />
+                                    <ui:FilterDataTable DataTable="[initialDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="512,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[scrapeDT]" SelectColumnsMode="Keep">
+                                      <ui:FilterDataTable.Filters>
+                                        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                          <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
+                                        </scg:List>
+                                      </ui:FilterDataTable.Filters>
+                                      <ui:FilterDataTable.SelectColumns>
+                                        <scg:List x:TypeArguments="InArgument" Capacity="8">
+                                          <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
+                                          <InArgument x:TypeArguments="x:String">["APS_FIRSTNAME"]</InArgument>
+                                          <InArgument x:TypeArguments="x:String">["APS_LASTNAME"]</InArgument>
+                                          <InArgument x:TypeArguments="x:String">["LICENSE_NUMBER"]</InArgument>
+                                          <InArgument x:TypeArguments="x:String">["LICENSE_STATE"]</InArgument>
+                                        </scg:List>
+                                      </ui:FilterDataTable.SelectColumns>
+                                    </ui:FilterDataTable>
+                                    <ui:Delete ContinueOnError="True" DisplayName="Delete older file" sap:VirtualizedContainerService.HintSize="512,79" sap2010:WorkflowViewState.IdRef="Delete_1" Path="Data\Input\file_to_scrape.xlsx" />
+                                    <ui:WriteRange AddHeaders="True" DataTable="[scrapeDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="512,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Data\Input\file_to_scrape.xlsx" />
+                                    <ui:WriteCell Cell="B3" DisplayName="Set OutputFile Date for today" sap:VirtualizedContainerService.HintSize="512,115" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Settings" Text="[&quot;Data\Output\output_file_from_&quot;+Date.Today.ToString(&quot;MMddyyy&quot;)+&quot;.xlsx&quot;]" WorkbookPath="Data\Config.xlsx" />
                                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="512,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>

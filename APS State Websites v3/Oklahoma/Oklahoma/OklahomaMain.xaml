@@ -70,7 +70,6 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="392,295" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -79,15 +78,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="350,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="350,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="480,385" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="501,979" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try/Catch: Medical Board Search" sap:VirtualizedContainerService.HintSize="438,293" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try/Catch: Medical Board Search" sap:VirtualizedContainerService.HintSize="459,887" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -95,10 +94,10 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence sap:VirtualizedContainerService.HintSize="421,660" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -132,7 +131,7 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="425,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -187,21 +186,11 @@
     </ui:CommentOut>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke OklahomaNursesMain workflow" sap:VirtualizedContainerService.HintSize="350,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="OklahomaNurses\OklahomaNursesMain.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_LastName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_LastName" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_FirstName">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_FirstName" />
-        </InArgument>
-        <InArgument x:TypeArguments="ui:Browser" x:Key="in_BrowserToUse">
-          <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="in_BrowserToUse" />
-        </InArgument>
-        <OutArgument x:TypeArguments="s:String[]" x:Key="out_InfoArr">
-          <mva:VisualBasicReference x:TypeArguments="s:String[]" ExpressionText="out_InfoArr" />
-        </OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_licenseNumber">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_LicenseNumber" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_LastName">[in_LastName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FirstName">[in_FirstName]</InArgument>
+        <InArgument x:TypeArguments="ui:Browser" x:Key="in_BrowserToUse">[in_BrowserToUse]</InArgument>
+        <OutArgument x:TypeArguments="s:String[]" x:Key="out_InfoArr">[out_InfoArr]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_licenseNumber">[in_LicenseNumber]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

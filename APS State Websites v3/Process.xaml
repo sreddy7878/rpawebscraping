@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1101,1141</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1101,1046</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -69,10 +69,9 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="539,1076" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="539,981" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="FirstName" />
       <Variable x:TypeArguments="x:String" Name="LastName" />
@@ -85,7 +84,6 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="497,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
     <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="497,224" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
@@ -218,21 +216,11 @@
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="TX" DisplayName="Invoke TexasMain workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Texas\TexasMain.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="ui:Browser" x:Key="in_BrowserToUse">
-            <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="in_BrowserToUse" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_FirstName">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirstName" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_LastName">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LastName" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_LicenseNumber">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LicenseNum" />
-          </InArgument>
-          <OutArgument x:TypeArguments="s:String[]" x:Key="out_InfoArr">
-            <mva:VisualBasicReference x:TypeArguments="s:String[]" ExpressionText="out_InfoArr" />
-          </OutArgument>
+          <InArgument x:TypeArguments="ui:Browser" x:Key="in_BrowserToUse">[in_BrowserToUse]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_FirstName">[FirstName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_LastName">[LastName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_LicenseNumber">[LicenseNum]</InArgument>
+          <OutArgument x:TypeArguments="s:String[]" x:Key="out_InfoArr">[out_InfoArr]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="PA" DisplayName="Invoke PennsylvaniaMain workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Pennsylvania\Pennsylvania\PennsylvaniaMain.xaml">
