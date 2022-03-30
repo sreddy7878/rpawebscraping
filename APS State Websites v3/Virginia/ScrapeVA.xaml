@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1101,1650</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>604.666666666667,1663.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ScrapeVA_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -71,7 +71,7 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ScrapeVA" sap:VirtualizedContainerService.HintSize="615,1585" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ScrapeVA" sap:VirtualizedContainerService.HintSize="614.666666666667,1598.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sbwLicNum" />
       <Variable x:TypeArguments="x:String" Default="VA" Name="sbwLicState" />
@@ -93,19 +93,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_BrowserToUse]" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="573,1493" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
+    <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_BrowserToUse]" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="572.666666666667,1506.66666666667" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="539,1385" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="538.666666666667,1398.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get License Number" sap:VirtualizedContainerService.HintSize="497,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get License Number" sap:VirtualizedContainerService.HintSize="496.666666666667,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
               <ui:GetValue.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7aabc37b-37c8-4605-8133-a9f341c935e7" InformativeScreenshot="eb6b03a3eadb995e6db357d1bafcd7be" Selector="&lt;html app='chrome.exe' title='License Lookup' /&gt;&lt;webctrl tag='TD' rowName='License Number' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -120,7 +120,7 @@
                 <OutArgument x:TypeArguments="x:String">[sbwLicNum]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="License Type" sap:VirtualizedContainerService.HintSize="497,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="License Type" sap:VirtualizedContainerService.HintSize="496.666666666667,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
               <ui:GetValue.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="26c462cd-a3ae-4c4f-a7f2-f930feef9889" InformativeScreenshot="78b9009a7214238fbcf65888c03756ec" Selector="&lt;html app='chrome.exe' title='License Lookup' /&gt;&lt;webctrl tableRow='2' tag='TD' rowName='Occupation' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -135,9 +135,9 @@
                 <OutArgument x:TypeArguments="x:String">[sbwLicType]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Name" sap:VirtualizedContainerService.HintSize="497,106" sap2010:WorkflowViewState.IdRef="GetValue_3">
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Name" sap:VirtualizedContainerService.HintSize="496.666666666667,106" sap2010:WorkflowViewState.IdRef="GetValue_3">
               <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b127a1ea-4a7a-4f40-98f8-63cc8553b9a3" InformativeScreenshot="bcb25da9ee29f1ea4a8f44e0cb2bcd75" Selector="&lt;html app='chrome.exe' title='License Lookup' /&gt;&lt;webctrl tableRow='3' tag='TD' rowName='Name' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b127a1ea-4a7a-4f40-98f8-63cc8553b9a3" InformativeScreenshot="bcb25da9ee29f1ea4a8f44e0cb2bcd75" Selector="&lt;html app='chrome.exe' title='License Lookup' /&gt;&lt;webctrl omit:tableRow='3' tag='TD' rowName='Name' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -150,7 +150,7 @@
                 <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
-            <Assign sap:VirtualizedContainerService.HintSize="497,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign sap:VirtualizedContainerService.HintSize="496.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
               </Assign.To>
@@ -158,7 +158,7 @@
                 <InArgument x:TypeArguments="x:String" xml:space="preserve">[name.TrimEnd.TrimStart.Replace("  "," ")]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="497,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign sap:VirtualizedContainerService.HintSize="496.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="s:String[]">[nameArr]</OutArgument>
               </Assign.To>
@@ -166,7 +166,7 @@
                 <InArgument x:TypeArguments="s:String[]">[Split(name," ")]</InArgument>
               </Assign.Value>
             </Assign>
-            <Switch x:TypeArguments="x:Int32" DisplayName="Clean Name" Expression="[nameArr.Count]" sap:VirtualizedContainerService.HintSize="497,159" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+            <Switch x:TypeArguments="x:Int32" DisplayName="Clean Name" Expression="[nameArr.Count]" sap:VirtualizedContainerService.HintSize="496.666666666667,165.333333333333" sap2010:WorkflowViewState.IdRef="Switch`1_1">
               <Switch.Default>
                 <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_14">
                   <Assign.To>
@@ -177,13 +177,13 @@
                   </Assign.Value>
                 </Assign>
               </Switch.Default>
-              <Sequence x:Key="3" sap:VirtualizedContainerService.HintSize="604,1030" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence x:Key="3" sap:VirtualizedContainerService.HintSize="604,854.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign sap:VirtualizedContainerService.HintSize="562,62" sap2010:WorkflowViewState.IdRef="Assign_4">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[sbwFirst]</OutArgument>
                   </Assign.To>
@@ -191,7 +191,7 @@
                     <InArgument x:TypeArguments="x:String">[nameArr(0)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign sap:VirtualizedContainerService.HintSize="562,62" sap2010:WorkflowViewState.IdRef="Assign_5">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[sbwLast]</OutArgument>
                   </Assign.To>
@@ -199,7 +199,7 @@
                     <InArgument x:TypeArguments="x:String">[nameArr.Last]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign sap:VirtualizedContainerService.HintSize="562,62" sap2010:WorkflowViewState.IdRef="Assign_6">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[sbwmiddle]</OutArgument>
                   </Assign.To>
@@ -207,7 +207,7 @@
                     <InArgument x:TypeArguments="x:String">[nameArr(1)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="562,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="562,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                   <ui:CommentOut.Body>
                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <sap:WorkflowViewStateService.ViewState>
@@ -343,7 +343,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_12">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[sbwLast]</OutArgument>
                   </Assign.To>
@@ -351,7 +351,7 @@
                     <InArgument x:TypeArguments="x:String">[nameArr.First]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_13">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[sbwFirst]</OutArgument>
                   </Assign.To>
@@ -361,9 +361,9 @@
                 </Assign>
               </Sequence>
             </Switch>
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="License Expire Date" sap:VirtualizedContainerService.HintSize="497,106" sap2010:WorkflowViewState.IdRef="GetValue_4">
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="License Expire Date" sap:VirtualizedContainerService.HintSize="496.666666666667,106" sap2010:WorkflowViewState.IdRef="GetValue_4">
               <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5670f68b-6d99-47c1-b2f7-a73a90851fe6" InformativeScreenshot="e472334f9af50151e24796a6cda49243" Selector="&lt;html app='chrome.exe' title='License Lookup' /&gt;&lt;webctrl tableRow='6' tag='TD' rowName='Expire Date' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5670f68b-6d99-47c1-b2f7-a73a90851fe6" InformativeScreenshot="e472334f9af50151e24796a6cda49243" Selector="&lt;html app='chrome.exe' title='License Lookup' /&gt;&lt;webctrl omit:tableRow='6' tag='TD' rowName='Expire Date' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -376,7 +376,7 @@
                 <OutArgument x:TypeArguments="x:String">[sbwLicExpDate]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
-            <Assign sap:VirtualizedContainerService.HintSize="497,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+            <Assign sap:VirtualizedContainerService.HintSize="496.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_15">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[sbwLicExpDate]</OutArgument>
               </Assign.To>
@@ -384,9 +384,9 @@
                 <InArgument x:TypeArguments="x:String">[sbwLicExpDate.trimend.trimstart]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="License Status" sap:VirtualizedContainerService.HintSize="497,106" sap2010:WorkflowViewState.IdRef="GetValue_5">
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="License Status" sap:VirtualizedContainerService.HintSize="496.666666666667,106" sap2010:WorkflowViewState.IdRef="GetValue_5">
               <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="492b661a-1ad6-4e32-89f2-5fde0d77fb79" InformativeScreenshot="1512c543c9ba4be91975453c7916aab0" Selector="&lt;html app='chrome.exe' title='License Lookup' /&gt;&lt;webctrl tableRow='7' tag='TD' rowName='License Status' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="492b661a-1ad6-4e32-89f2-5fde0d77fb79" InformativeScreenshot="1512c543c9ba4be91975453c7916aab0" Selector="&lt;html app='chrome.exe' title='License Lookup' /&gt;&lt;webctrl omit:tableRow='7' tag='TD' rowName='License Status' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -399,7 +399,7 @@
                 <OutArgument x:TypeArguments="x:String">[sbwLicStatus]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
-            <Assign sap:VirtualizedContainerService.HintSize="497,64" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="496.666666666667,65.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="s:String[]">[out_InfoArr]</OutArgument>
               </Assign.To>
