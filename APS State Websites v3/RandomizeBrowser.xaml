@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1101,827</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>534.666666666667,1268</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>RandomizeBrowser_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -58,9 +58,14 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This is to choose a different browser to try to get more results and prevent CAPTCHA from blocking the automation&#xD;&#xA;&#xD;&#xA;It chooses a random number from 1-3, assigns that browser type, then opens the browser.&#xD;&#xA;&#xD;&#xA;The browsers are assigned below:&#xD;&#xA;1= Chrome&#xD;&#xA;2=Edge&#xD;&#xA;3=Firefox" DisplayName="RandomizeBrowser" sap:VirtualizedContainerService.HintSize="509,629" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="This is to choose a different browser to try to get more results and prevent CAPTCHA from blocking the automation&#xA;&#xA;It chooses a random number from 1-3, assigns that browser type, then opens the browser.&#xA;&#xA;The browsers are assigned below:&#xA;1= Chrome&#xA;2=Edge&#xA;3=Firefox" DisplayName="RandomizeBrowser" sap:VirtualizedContainerService.HintSize="538.666666666667,1203.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="this is to choose which browser to use:&#xD;&#xA;1= Chrome&#xD;&#xA;2=Edge&#xD;&#xA;3=Firefox" Name="randomInt" />
+      <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="this is to choose which browser to use:&#xA;1= Chrome&#xA;2=Edge&#xA;3=Firefox" Name="randomInt" />
       <Variable x:TypeArguments="ui:BrowserType" Name="BrowserTypeToUse" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -69,7 +74,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="467,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="496.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[randomInt]</OutArgument>
       </Assign.To>
@@ -77,14 +82,14 @@
         <InArgument x:TypeArguments="x:Int32">[new Random().Next(1,3)]</InArgument>
       </Assign.Value>
     </Assign>
-    <Switch x:TypeArguments="x:Int32" DisplayName="Assign Browser Type" Expression="[randomInt]" sap:VirtualizedContainerService.HintSize="467,51" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:Int32" DisplayName="Assign Browser Type" Expression="[randomInt]" sap:VirtualizedContainerService.HintSize="496.666666666667,620" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign x:Key="1" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign x:Key="1" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_2">
         <Assign.To>
           <OutArgument x:TypeArguments="ui:BrowserType">[BrowserTypeToUse]</OutArgument>
         </Assign.To>
@@ -92,7 +97,7 @@
           <InArgument x:TypeArguments="ui:BrowserType">[BrowserType.Chrome]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign x:Key="2" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign x:Key="2" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_3">
         <Assign.To>
           <OutArgument x:TypeArguments="ui:BrowserType">[BrowserTypeToUse]</OutArgument>
         </Assign.To>
@@ -100,7 +105,7 @@
           <InArgument x:TypeArguments="ui:BrowserType">[BrowserType.Edge]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign x:Key="3" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign x:Key="3" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_4">
         <Assign.To>
           <OutArgument x:TypeArguments="ui:BrowserType">[BrowserTypeToUse]</OutArgument>
         </Assign.To>
@@ -109,13 +114,13 @@
         </Assign.Value>
       </Assign>
     </Switch>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="[BrowserTypeToUse]" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,184" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[out_BrowserToUse]" Url="cms.gov">
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" BrowserType="[BrowserTypeToUse]" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="496.666666666667,187.333333333333" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" NewSession="True" Private="True" UiBrowser="[out_BrowserToUse]" Url="cms.gov">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>

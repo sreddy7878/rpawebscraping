@@ -5754,15 +5754,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\603945\\.nuget\\packages\\": {}
+    "C:\\Users\\MeetalJalu\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "APS WebScrapers v3",
       "projectName": "APS WebScrapers v3",
-      "projectPath": "C:\\Users\\603945\\Documents\\UiPath\\APS State Websites v3\\.local",
-      "packagesPath": "C:\\Users\\603945\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\603945\\Documents\\UiPath\\APS State Websites v3\\.local"
+      "projectPath": "C:\\Just_Test\\aps-rpa-uipath\\APS State Websites v3\\.local",
+      "packagesPath": "C:\\Users\\MeetalJalu\\.nuget\\packages\\",
+      "outputPath": "C:\\Just_Test\\aps-rpa-uipath\\APS State Websites v3\\.local"
     },
     "frameworks": {
       "net461": {
@@ -5793,7 +5793,7 @@
             "version": "[1.9.2, 1.9.2]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\603945\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\MeetalJalu\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
