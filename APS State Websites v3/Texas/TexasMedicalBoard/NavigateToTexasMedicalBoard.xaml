@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>592,1340</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>912,898.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NavigateToTexasMedicalBoard_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -89,7 +89,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="484,58.6666666666667" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[TexasMedBoardURL]" />
+            <ui:NavigateTo Browser="[in_BrowserToUse]" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="484,58.6666666666667" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[TexasMedBoardURL]" />
             <ui:UiElementExists DisplayName="Accept Terms" Exists="[TermsBtnExists]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8472b86b-61cb-4e97-87c9-ff8e73a5ef44" InformativeScreenshot="b152e65883dd6d84ea1750ddad99adf7" Selector="&lt;html app='chrome.exe' title='Search Notice' /&gt;&lt;webctrl tag='INPUT' type='submit' aaname='I Accept the Usage Terms' /&gt;" TimeoutMS="5000">

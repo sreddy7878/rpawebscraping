@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1101,1815</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>967.333333333333,2382</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ScrapePerson_TXHealth_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -61,7 +61,12 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ScrapePerson_TXHealth" sap:VirtualizedContainerService.HintSize="539,1750" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="ScrapePerson_TXHealth" sap:VirtualizedContainerService.HintSize="538.666666666667,2317.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sbwLicNum" />
       <Variable x:TypeArguments="x:String" Default="TX" Name="sbwLicState" />
@@ -82,13 +87,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_BrowserToUse]" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="497,1135" sap2010:WorkflowViewState.IdRef="BrowserScope_2">
+    <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_BrowserToUse]" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="496.666666666667,988.666666666667" sap2010:WorkflowViewState.IdRef="BrowserScope_2">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1027" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,880.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -154,21 +159,6 @@
                 <OutArgument x:TypeArguments="x:String">[sbwLicExpDate]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
-            <ui:GetValue ContinueOnError="True" DisplayName="Disciplinary Actions" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_5">
-              <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0a53940f-f72f-4d90-a24f-8b2db351a295" InformativeScreenshot="e7bb5cc71ec509918d79905c70b12821" Selector="&lt;webctrl aaname='Disciplinary Actions' parentid='contentBox' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:GetValue.Target>
-              <ui:GetValue.Value>
-                <OutArgument x:TypeArguments="x:String">[sbwLicQualifier]</OutArgument>
-              </ui:GetValue.Value>
-            </ui:GetValue>
             <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Lic Num" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_6">
               <ui:GetValue.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a0978dbf-b76a-482d-8cbc-1c57846e747b" InformativeScreenshot="1b7a55477f85519cca1f3ef836009c79" Selector="&lt;webctrl parentid='contentBox' tag='TABLE' /&gt;&lt;webctrl tag='TH' colName='*License Number:*' /&gt;">
@@ -184,7 +174,7 @@
                 <OutArgument x:TypeArguments="x:String">[sbwLicNum]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
-            <ui:Replace BuilderPattern="License Number: " DisplayName="Clean LicNumber" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Replace_1" Input="[sbwLicNum]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;License Number: &quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="License Number: " RegexOption="IgnoreCase" Result="[sbwLicNum]">
+            <ui:Replace BuilderPattern="License Number: " DisplayName="Clean LicNumber" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="Replace_1" Input="[sbwLicNum]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;License Number: &quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="License Number: " RegexOption="IgnoreCase" Result="[sbwLicNum]">
               <ui:Replace.Replacement>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" Value="" />
@@ -201,7 +191,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BrowserScope>
-    <Assign DisplayName="remove comma" sap:VirtualizedContainerService.HintSize="497,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+    <Assign DisplayName="remove comma" sap:VirtualizedContainerService.HintSize="496.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
       </Assign.To>
@@ -209,7 +199,7 @@
         <InArgument x:TypeArguments="x:String">[name.Replace(",","")]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign DisplayName="split on space" sap:VirtualizedContainerService.HintSize="497,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="split on space" sap:VirtualizedContainerService.HintSize="496.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:ICollection(x:String)">[nameColl]</OutArgument>
       </Assign.To>
@@ -217,9 +207,9 @@
         <InArgument x:TypeArguments="scg:ICollection(x:String)">[Split(name, " ")]</InArgument>
       </Assign.Value>
     </Assign>
-    <Switch x:TypeArguments="x:Int32" DisplayName="name assignment" Expression="[nameColl.Count]" sap:VirtualizedContainerService.HintSize="497,179" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:Int32" DisplayName="name assignment" Expression="[nameColl.Count]" sap:VirtualizedContainerService.HintSize="496.666666666667,887.333333333333" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Switch.Default>
-        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_4">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[sbwLast]</OutArgument>
           </Assign.To>
@@ -228,7 +218,7 @@
           </Assign.Value>
         </Assign>
       </Switch.Default>
-      <ui:MultipleAssign x:Key="3" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+      <ui:MultipleAssign x:Key="3" sap:VirtualizedContainerService.HintSize="430.666666666667,160.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -258,7 +248,7 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <ui:MultipleAssign x:Key="4" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+      <ui:MultipleAssign x:Key="4" sap:VirtualizedContainerService.HintSize="430.666666666667,160.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
@@ -288,7 +278,7 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <ui:MultipleAssign x:Key="2" sap:VirtualizedContainerService.HintSize="334,129" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+      <ui:MultipleAssign x:Key="2" sap:VirtualizedContainerService.HintSize="430.666666666667,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
@@ -311,7 +301,7 @@
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
     </Switch>
-    <Assign sap:VirtualizedContainerService.HintSize="497,64" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="496.666666666667,65.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">[out_InfoArr]</OutArgument>
       </Assign.To>

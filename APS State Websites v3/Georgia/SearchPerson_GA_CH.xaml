@@ -115,7 +115,7 @@
                 </ui:Target>
               </ui:SetValue.Target>
             </ui:SetValue>
-            <Flowchart DisplayName="Captcha_solver" sap:VirtualizedContainerService.HintSize="1133.33333333333,754.666666666667" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+            <Flowchart DisplayName="Captcha_solver" sap:VirtualizedContainerService.HintSize="1133.33333333333,764" sap2010:WorkflowViewState.IdRef="Flowchart_2">
               <Flowchart.Variables>
                 <Variable x:TypeArguments="x:Boolean" Name="isDone" />
                 <Variable x:TypeArguments="x:Boolean" Name="busExists" />
@@ -130,7 +130,7 @@
                   <av:Size x:Key="ShapeSize">60,74.6666666666667</av:Size>
                   <x:Double x:Key="Width">1099.3333333333367</x:Double>
                   <av:PointCollection x:Key="ConnectorLocation">70,50 160,50</av:PointCollection>
-                  <x:Double x:Key="Height">718.66666666666663</x:Double>
+                  <x:Double x:Key="Height">728</x:Double>
                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -232,7 +232,7 @@
                                 <av:PointCollection x:Key="ConnectorLocation">610,40 620,40 620,83.6666666666667</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Move Cursor" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="Hover_1" SendWindowMessages="False" SimulateHover="False">
+                            <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Move Cursor" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Hover_1" SendWindowMessages="False" SimulateHover="False">
                               <ui:Hover.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
